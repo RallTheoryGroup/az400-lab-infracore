@@ -1,0 +1,9 @@
+{
+  "name": "infracore",
+  "version": "1.0.0",
+  "description": "RallTheory InfraCore service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
