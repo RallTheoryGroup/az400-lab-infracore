@@ -40,7 +40,7 @@ jobs:
 
       - name: Upload Trivy SARIF
         if: always()
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: trivy-image.sarif
           category: 'trivy-container'
@@ -108,7 +108,7 @@ jobs:
 
       - name: Upload Bicep SARIF to code scanning
         if: always()
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: ${{ env.INFRACORE_PATH }}/bicep/results_sarif.sarif
           category: infracore-arm
@@ -145,7 +145,7 @@ jobs:
 
       - name: Upload Terraform SARIF to code scanning
         if: always()
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: ${{ env.INFRACORE_PATH }}/terraform/results_sarif.sarif
           category: infracore-terraform
